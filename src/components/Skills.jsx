@@ -11,7 +11,6 @@ import '../styles/Skills.css'
 const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -36,7 +35,7 @@ const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
-              <p>My diverse range of skills and expertise in the field of technology. <br></br>
+              <p>Skills and expertise I have in the field of technology. <br></br>
                 Whether you're interested in web development or database Management, you'll find something here to pique your interest.</p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">

@@ -12,21 +12,13 @@ app.listen(5001, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
-// const contactEmail = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     user: "xue.yuki.han@gmail.com",
-//     pass: "hanxue0104"
-//   },
-// });
-
 const contactEmail = nodemailer.createTransport({
-  host: 'smtp.office365.com', // Outlook SMTP 服务器地址
-  port: 587, // SMTP 端口
-  secure: false, // 默认为 true，但是 Outlook 使用 STARTTLS，因此这里设置为 false
+  host: 'smtp.office365.com',
+  port: 587,
+  secure: false,
   auth: {
-    user: 'xue.b.han@outlook.com', // 你的 Outlook 邮箱地址
-    pass: 'hanxue0104' // 你的 Outlook 邮箱密码
+    user: '',
+    pass: ''
   },
   tls: {
     ciphers: 'SSLv3'
@@ -48,8 +40,7 @@ router.post("/contact", (req, res) => {
   const phone = req.body.phone;
   const mail = {
     from: name,
-    // to: "xue.yuki.han@gmail.com",
-    to: "xue.b.han@outlook.com",
+    to: "",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
