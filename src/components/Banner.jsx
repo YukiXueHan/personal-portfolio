@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import headerImg from "../assets/img/header-img2.png";
+import { FileEarmarkArrowDown } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import '../styles/Banner.css'
@@ -48,6 +48,15 @@ const Banner = () => {
     }
   }
 
+  function downloadResume() {
+    const link = document.createElement('a');
+    link.href = '/Resume_XueHan.pdf';
+    link.download = 'Resume_XueHan.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -61,7 +70,7 @@ const Banner = () => {
                   <p>
                     As an accomplished full-stack developer, I bring a wealth of experience and a passion for innovation to every project. With expertise in both front-end and back-end development, I thrive on turning ideas into dynamic web applications that exceed expectations. Explore my portfolio to witness the diverse range of projects I've successfully delivered, showcasing my dedication to creating impactful software solutions.
                   </p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={downloadResume}>Download CV <FileEarmarkArrowDown size={25} /></button>
                 </div>}
             </TrackVisibility>
           </Col>
@@ -69,7 +78,9 @@ const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img" />
+                  <div className="imgContainer">
+                    <img src={headerImg} alt="Header Img" />
+                  </div>
                 </div>}
             </TrackVisibility>
           </Col>

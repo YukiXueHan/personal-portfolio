@@ -1,6 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "../components/ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.gif";
+import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,18 +13,21 @@ const Projects = () => {
   const projects = [
     {
       title: "Personal Portfolio",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      description: "visit website",
+      imgUrl: projImg3,
+      url: "https://personal-portfolio-ste6.onrender.com/"
+    },
+    {
+      title: "Game of Life",
+      description: "visit website",
+      imgUrl: projImg2,
+      url: "https://jing-guo-xue-han-assignment2.onrender.com"
     },
     {
       title: "Personal Portfolio",
       description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Personal Portfolio",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: projImg3,
+      url: "https://personal-portfolio-ste6.onrender.com/"
     },
   ];
 
@@ -39,13 +44,13 @@ const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">All</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">Web</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Mobile</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>

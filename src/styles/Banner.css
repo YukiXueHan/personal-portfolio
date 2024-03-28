@@ -43,6 +43,34 @@
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 10px;
+  transition: 0.3s ease-in-out;
+  background-color: transparent;
+  position: relative;
+}
+
+.banner button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  border-radius: 9999px;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.banner button:hover {
+  color: #121212;
+  /* background-color: #fff; */
+}
+
+.banner button:hover::before {
+  width: 100%;
 }
 
 .banner button svg {
@@ -53,25 +81,23 @@
 }
 
 .banner button:hover svg {
-  margin-left: 25px;
+  margin-left: 20px;
+  /* background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%); */
 }
 
-.banner img {
-  animation: updown 3s linear infinite;
+.imgContainer {
+  width: 400px;
+  height: 400px;
+  padding: 50px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: #181818;
 }
 
-@keyframes updown {
-  0% {
-    transform: translateY(-20px);
-  }
-
-  50% {
-    transform: translateY(20px);
-  }
-
-  100% {
-    transform: translateY(-20px);
-  }
+.imgContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .txt-rotate>.wrap {
