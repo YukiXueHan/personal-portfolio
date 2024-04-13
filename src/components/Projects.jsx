@@ -21,7 +21,7 @@ const Projects = () => {
       title: "Game of Life",
       description: "visit website",
       imgUrl: projImg2,
-      url: "https://jing-guo-xue-han-assignment2.onrender.com"
+      url: "https://game-of-life-qmtl.onrender.com/"
     },
     {
       title: "Personal Portfolio",
